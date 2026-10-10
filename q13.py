@@ -1,0 +1,28 @@
+import numpy as np
+import matplotlib.pyplot as plt
+def plot_curves():    
+    x = np.linspace(-10, 10, 400)   
+     y_sin = np.sin(x)   
+      y_cos = np.cos(x)    
+      y_poly = x ** 3 - 4 * x ** 2 + x + 6   
+       y_exp = np.exp(x)   
+        plt.figure(figsize=(12, 8))   
+         plt.subplot(2, 2, 1)    
+         plt.plot(x, y_sin, color="red")   
+          plt.title("sine curve")   
+           plt.grid(True)   
+            plt.subplot(2, 2, 2)   
+             plt.plot(x, y_cos, color="yellow")   
+              plt.title("cos curve")  
+                plt.grid(True)   
+                 plt.subplot(2, 2, 3)   
+                  plt.plot(x, y_poly, color="orange")   
+                   plt.title("polynomial curve")   
+                    plt.grid(True)   
+                     plt.subplot(2, 2, 4)  
+                       plt.plot(x, y_exp, color="#ce1dbc")  
+                         plt.title("exponential curve")   
+                          plt.ylim(0, 1000)  
+                            plt.grid(True)   
+                             plt.tight_layout()   
+                              plt.show()plot_curves()
